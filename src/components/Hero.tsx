@@ -1,6 +1,5 @@
 import { useState, type FormEvent } from 'react'
 import { ArrowUp } from 'lucide-react'
-import Navbar from './Navbar'
 import WhatsAppMockup from './WhatsAppMockup'
 
 const WHATSAPP_NUMBER = '260950611757'
@@ -60,9 +59,7 @@ export default function Hero() {
     >
       <FieldTexture />
 
-      <Navbar />
-
-      <div className="flex-1 min-h-8 sm:min-h-12 lg:min-h-16 shrink-0" />
+      <div className="flex-1 min-h-16 sm:min-h-20 lg:min-h-24 shrink-0" />
 
       <div className="relative z-10 flex flex-col items-center text-center px-5">
         <h1 className="text-ink font-normal leading-[1.05] tracking-tight text-[40px] min-[400px]:text-[44px] sm:text-6xl lg:text-7xl xl:text-[80px]">

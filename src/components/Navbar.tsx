@@ -14,7 +14,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <nav className="animate-fade-down relative z-20">
+    <nav className="animate-fade-down sticky top-0 z-30 bg-cream/90 backdrop-blur-md border-b border-line">
       <div className="flex items-center justify-between px-5 sm:px-8 lg:px-10 py-4 sm:py-5">
         <a href="#top" className="shrink-0">
           <Logo />
