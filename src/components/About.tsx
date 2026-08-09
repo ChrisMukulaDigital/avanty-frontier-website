@@ -1,11 +1,9 @@
+import ScrollReveal from './ScrollReveal'
+
 const PRINCIPLES = [
   {
     title: 'Source',
-    body: "We buy from suppliers we already know and trust — not the first vendor who answers the phone.",
-  },
-  {
-    title: 'Mark up',
-    body: 'A transparent margin on the cost of goods, plus a service fee — confirmed in writing before you commit.',
+    body: 'We buy from suppliers we already know and trust — not the first vendor who answers the phone.',
   },
   {
     title: 'Coordinate logistics',
@@ -20,7 +18,7 @@ const PRINCIPLES = [
 export default function About() {
   return (
     <section id="about" className="py-20 sm:py-24 px-5 sm:px-8 lg:px-10 bg-white">
-      <div className="max-w-5xl mx-auto">
+      <ScrollReveal className="max-w-5xl mx-auto">
         <div className="text-center mb-14">
           <span className="inline-block text-[13px] font-bold uppercase tracking-wider text-[#7c5f20] mb-3">
             About Avanty
@@ -38,9 +36,12 @@ export default function About() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
+        <div className="grid sm:grid-cols-3 gap-5 mb-14">
           {PRINCIPLES.map((p, i) => (
-            <div key={p.title} className="rounded-2xl border border-line bg-cream p-6 text-left">
+            <div
+              key={p.title}
+              className="rounded-2xl border border-line bg-cream p-6 text-left transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-ink/5 hover:border-gold/40"
+            >
               <span className="text-[11px] font-bold text-gold">0{i + 1}</span>
               <h3 className="text-[15px] font-semibold text-ink mt-1 mb-2">{p.title}</h3>
               <p className="text-[13.5px] text-grey leading-relaxed">{p.body}</p>
@@ -48,7 +49,7 @@ export default function About() {
           ))}
         </div>
 
-        <div className="max-w-2xl mx-auto rounded-2xl border border-line bg-cream p-7 sm:p-8 text-center">
+        <div className="max-w-2xl mx-auto rounded-2xl border border-line bg-cream p-7 sm:p-8 text-center transition-all duration-300 hover:shadow-lg hover:shadow-ink/5">
           <p className="text-ink text-[15px] sm:text-base leading-relaxed italic">
             "We help Zambian businesses, institutions, and agricultural buyers who
             struggle with unreliable, inconsistent supply to get what they need, when
@@ -56,7 +57,7 @@ export default function About() {
             managing quality and logistics end-to-end."
           </p>
         </div>
-      </div>
+      </ScrollReveal>
     </section>
   )
 }

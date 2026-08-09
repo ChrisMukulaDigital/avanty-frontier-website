@@ -1,4 +1,5 @@
 import { MessageCircle, FileCheck2, Truck } from 'lucide-react'
+import ScrollReveal from './ScrollReveal'
 
 const STEPS = [
   {
@@ -21,7 +22,7 @@ const STEPS = [
 export default function Process() {
   return (
     <section id="process" className="py-20 sm:py-24 px-5 sm:px-8 lg:px-10 bg-cream">
-      <div className="max-w-5xl mx-auto text-center">
+      <ScrollReveal className="max-w-5xl mx-auto text-center">
         <span className="inline-block text-[13px] font-bold uppercase tracking-wider text-[#7c5f20] mb-3">
           How It Works
         </span>
@@ -35,15 +36,18 @@ export default function Process() {
 
         <div className="relative grid sm:grid-cols-3 gap-10 sm:gap-6">
           {STEPS.map((step, i) => (
-            <div key={step.title} className="relative flex flex-col items-center text-center">
+            <div key={step.title} className="group relative flex flex-col items-center text-center">
               {i < STEPS.length - 1 && (
                 <div
                   className="hidden sm:block absolute top-8 left-[calc(50%+2rem)] w-[calc(100%-4rem)] h-px bg-line"
                   aria-hidden="true"
                 />
               )}
-              <div className="relative z-10 w-16 h-16 rounded-full bg-ink flex items-center justify-center mb-5">
-                <step.icon className="w-6 h-6 text-gold" strokeWidth={1.75} />
+              <div className="relative z-10 w-16 h-16 rounded-full bg-ink flex items-center justify-center mb-5 transition-all duration-300 group-hover:bg-gold group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-gold/30">
+                <step.icon
+                  className="w-6 h-6 text-gold transition-colors duration-300 group-hover:text-ink"
+                  strokeWidth={1.75}
+                />
               </div>
               <h3 className="text-[17px] font-semibold text-ink mb-2">
                 {i + 1}. {step.title}
@@ -52,7 +56,7 @@ export default function Process() {
             </div>
           ))}
         </div>
-      </div>
+      </ScrollReveal>
     </section>
   )
 }

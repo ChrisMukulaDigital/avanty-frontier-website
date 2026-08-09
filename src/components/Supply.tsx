@@ -1,5 +1,6 @@
 import agriInputsImg from '../assets/agri-inputs.jpg'
 import cleaningSuppliesImg from '../assets/cleaning-supplies.jpg'
+import ScrollReveal from './ScrollReveal'
 
 const AGRI_ITEMS = ['Fertilizer', 'Planting equipment', 'Other seasonal inputs, sourced on request']
 const CLEANING_ITEMS = [
@@ -21,9 +22,14 @@ interface OfferCardProps {
 
 function OfferCard({ image, imageAlt, tag, title, items, proof, honestGap }: OfferCardProps) {
   return (
-    <div className="rounded-2xl border border-line bg-white overflow-hidden text-left">
+    <div className="group rounded-2xl border border-line bg-white overflow-hidden text-left transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-ink/5 hover:border-line">
       <div className="h-44 sm:h-52 overflow-hidden">
-        <img src={image} alt={imageAlt} className="w-full h-full object-cover" loading="lazy" />
+        <img
+          src={image}
+          alt={imageAlt}
+          className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+          loading="lazy"
+        />
       </div>
       <div className="p-7 sm:p-8">
         <span className="inline-block text-[11px] font-bold uppercase tracking-wider text-[#7c5f20] bg-gold/10 px-2.5 py-1 rounded mb-4">
@@ -53,7 +59,7 @@ function OfferCard({ image, imageAlt, tag, title, items, proof, honestGap }: Off
 export default function Supply() {
   return (
     <section id="supply" className="py-20 sm:py-24 px-5 sm:px-8 lg:px-10 bg-white">
-      <div className="max-w-5xl mx-auto text-center">
+      <ScrollReveal className="max-w-5xl mx-auto text-center">
         <span className="inline-block text-[13px] font-bold uppercase tracking-wider text-[#7c5f20] mb-3">
           What We Supply
         </span>
@@ -68,7 +74,7 @@ export default function Supply() {
         <div className="grid sm:grid-cols-2 gap-6">
           <OfferCard
             image={agriInputsImg}
-            imageAlt="Fertilizer granules — illustrative stock photo, not Avanty's own operations"
+            imageAlt="Fertilizer granules"
             tag="Agricultural Inputs"
             title="Fertilizers & planting equipment"
             items={AGRI_ITEMS}
@@ -76,7 +82,7 @@ export default function Supply() {
           />
           <OfferCard
             image={cleaningSuppliesImg}
-            imageAlt="Cleaning supplies and tools — illustrative stock photo, not Avanty's own operations"
+            imageAlt="Cleaning supplies and tools"
             tag="Cleaning & Hygiene Supplies"
             title="Consumables for offices & institutions"
             items={CLEANING_ITEMS}
@@ -84,12 +90,7 @@ export default function Supply() {
             honestGap
           />
         </div>
-
-        <p className="mt-6 text-[12px] text-grey/70 text-center">
-          Photos are illustrative stock imagery, not Avanty's own operations — swap for
-          real photography once available.
-        </p>
-      </div>
+      </ScrollReveal>
     </section>
   )
 }

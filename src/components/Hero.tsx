@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from 'react'
 import { ArrowUp } from 'lucide-react'
 import WhatsAppMockup from './WhatsAppMockup'
+import heroAgriImg from '../assets/hero-agri.jpg'
 
 const WHATSAPP_NUMBER = '260950611757'
 
@@ -9,38 +10,23 @@ function buildWhatsAppLink(message: string) {
   return message.trim() ? `${base}?text=${encodeURIComponent(message.trim())}` : base
 }
 
-/** Faint, self-authored topographic texture — no external image dependency. */
-function FieldTexture() {
+/**
+ * Illustrative stock photo of agricultural work — not Avanty's own operations.
+ * Swap for real Avanty photography once available (see spec: background image).
+ * The gradient scrim keeps the headline legible and blends the hero's bottom
+ * edge into the white background of the What We Supply section below it.
+ */
+function HeroBackground() {
   return (
-    <svg
-      className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.05]"
-      preserveAspectRatio="none"
-      aria-hidden="true"
-    >
-      <defs>
-        <pattern id="topo" width="120" height="120" patternUnits="userSpaceOnUse">
-          <path
-            d="M0 60 Q30 20 60 60 T120 60"
-            fill="none"
-            stroke="#9C7A2E"
-            strokeWidth="1"
-          />
-          <path
-            d="M0 90 Q30 50 60 90 T120 90"
-            fill="none"
-            stroke="#9C7A2E"
-            strokeWidth="1"
-          />
-          <path
-            d="M0 30 Q30 -10 60 30 T120 30"
-            fill="none"
-            stroke="#9C7A2E"
-            strokeWidth="1"
-          />
-        </pattern>
-      </defs>
-      <rect width="100%" height="100%" fill="url(#topo)" />
-    </svg>
+    <>
+      <img
+        src={heroAgriImg}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover object-center"
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-cream/95 via-cream/80 to-white" />
+    </>
   )
 }
 
@@ -55,9 +41,9 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-screen flex-col overflow-hidden bg-cream"
+      className="relative flex min-h-screen flex-col overflow-hidden bg-cream pb-16 sm:pb-20"
     >
-      <FieldTexture />
+      <HeroBackground />
 
       <div className="flex-1 min-h-16 sm:min-h-20 lg:min-h-24 shrink-0" />
 
@@ -116,7 +102,7 @@ export default function Hero() {
 
       <div className="flex-1 min-h-10 sm:min-h-12 lg:min-h-16 shrink-0" />
 
-      <div className="animate-hero-rise [animation-delay:620ms] relative z-0 w-[86%] sm:w-[60%] lg:w-[40%] max-w-sm mx-auto shrink-0 -mb-10 sm:-mb-16">
+      <div className="animate-hero-rise [animation-delay:620ms] relative z-10 w-[86%] sm:w-[60%] lg:w-[40%] max-w-sm mx-auto shrink-0">
         <WhatsAppMockup />
       </div>
     </section>
