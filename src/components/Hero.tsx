@@ -24,10 +24,10 @@ function HeroBackground() {
           src={heroAgriImg}
           alt=""
           aria-hidden="true"
-          className="w-full h-full object-cover object-center scale-110 blur-md"
+          className="w-full h-full object-cover object-center scale-110 blur-[3px]"
         />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-b from-cream/90 via-cream/70 to-white" />
+      <div className="absolute inset-0 bg-gradient-to-b from-cream/75 via-cream/50 to-white" />
     </>
   )
 }
