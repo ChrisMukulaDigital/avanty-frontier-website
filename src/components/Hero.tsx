@@ -19,13 +19,15 @@ function buildWhatsAppLink(message: string) {
 function HeroBackground() {
   return (
     <>
-      <img
-        src={heroAgriImg}
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover object-center"
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-cream/95 via-cream/80 to-white" />
+      <div className="absolute inset-0 overflow-hidden">
+        <img
+          src={heroAgriImg}
+          alt=""
+          aria-hidden="true"
+          className="w-full h-full object-cover object-center scale-110 blur-md"
+        />
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-b from-cream/90 via-cream/70 to-white" />
     </>
   )
 }
