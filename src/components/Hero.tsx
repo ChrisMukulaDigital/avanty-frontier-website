@@ -104,7 +104,7 @@ export default function Hero() {
 
       <div className="flex-1 min-h-10 sm:min-h-12 lg:min-h-16 shrink-0" />
 
-      <div className="animate-hero-rise [animation-delay:620ms] relative z-10 w-[86%] sm:w-[60%] lg:w-[40%] max-w-sm mx-auto shrink-0">
+      <div className="animate-hero-rise [animation-delay:620ms] relative z-10 w-[41%] sm:w-[27%] lg:w-[15%] max-w-[168px] mx-auto shrink-0">
         <WhatsAppMockup />
       </div>
     </section>
