@@ -23,7 +23,7 @@ export default function About() {
           <span className="inline-block text-[13px] font-bold uppercase tracking-wider text-[#7c5f20] mb-3">
             About Avanty
           </span>
-          <h2 className="text-3xl sm:text-4xl font-normal text-ink tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl font-normal text-ink tracking-tight text-balance mb-4">
             Built on a working relationship, not a concept.
           </h2>
           <p className="text-grey text-base sm:text-lg max-w-2xl mx-auto">

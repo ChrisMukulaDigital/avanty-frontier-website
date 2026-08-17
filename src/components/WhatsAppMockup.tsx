@@ -66,7 +66,10 @@ function Bubble({ from, children }: BubbleProps) {
 export default function WhatsAppMockup() {
   return (
     <ScaledMockup>
-      <div className="relative h-full flex flex-col rounded-[2.75rem] overflow-hidden bg-[#1a1a1c] shadow-[0_-20px_80px_rgba(0,0,0,0.35)] ring-1 ring-white/10 text-left">
+      <div
+        aria-hidden="true"
+        className="relative h-full flex flex-col rounded-[2.75rem] overflow-hidden bg-[#1a1a1c] shadow-[0_-20px_80px_rgba(0,0,0,0.35)] ring-1 ring-white/10 text-left"
+      >
         {/* Notch */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 z-20 w-28 h-6 bg-black rounded-b-2xl" />
 

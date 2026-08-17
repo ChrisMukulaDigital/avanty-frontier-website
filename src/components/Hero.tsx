@@ -43,7 +43,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-screen flex-col overflow-hidden bg-cream pb-16 sm:pb-20"
+      className="relative flex min-h-dvh flex-col overflow-hidden bg-cream pb-16 sm:pb-20"
     >
       <HeroBackground />
 
@@ -61,8 +61,12 @@ export default function Hero() {
           onSubmit={handleSubmit}
           className="animate-fade-up [animation-delay:220ms] mt-5 sm:mt-6 w-full max-w-xl"
         >
-          <div className="flex items-center gap-3 rounded-full bg-white/70 backdrop-blur-md ring-1 ring-line pl-5 pr-1.5 py-1.5">
+          <label htmlFor="hero-quote" className="sr-only">
+            What do you need sourced?
+          </label>
+          <div className="flex items-center gap-3 rounded-full bg-white/70 backdrop-blur-md ring-1 ring-line pl-5 pr-1.5 py-1.5 focus-within:ring-2 focus-within:ring-gold">
             <input
+              id="hero-quote"
               type="text"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
@@ -72,9 +76,9 @@ export default function Hero() {
             <button
               type="submit"
               aria-label="Send to WhatsApp"
-              className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-ink text-white hover:scale-105 active:scale-95 transition-transform shrink-0 flex items-center justify-center"
+              className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-ink text-white hover:scale-105 active:scale-95 transition-transform shrink-0 flex items-center justify-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
             >
-              <ArrowUp className="w-4 h-4 sm:w-[18px] sm:h-[18px]" />
+              <ArrowUp className="w-4 h-4 sm:w-[18px] sm:h-[18px]" aria-hidden="true" />
             </button>
           </div>
         </form>

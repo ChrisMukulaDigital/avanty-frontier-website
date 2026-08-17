@@ -37,7 +37,7 @@ export default function Contact() {
           <span className="inline-block text-[13px] font-bold uppercase tracking-wider text-[#7c5f20] mb-3">
             Contact
           </span>
-          <h2 className="text-3xl sm:text-4xl font-normal text-ink tracking-tight mb-4">
+          <h2 className="text-3xl sm:text-4xl font-normal text-ink tracking-tight text-balance mb-4">
             Ready to place an order?
           </h2>
           <p className="text-grey text-base sm:text-lg max-w-xl mx-auto">
@@ -61,7 +61,7 @@ export default function Contact() {
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Your name"
-                className="w-full rounded-lg border border-line px-3.5 py-2.5 text-sm text-ink placeholder-grey outline-none focus:ring-1 focus:ring-gold"
+                className="w-full rounded-lg border border-line px-3.5 py-2.5 text-sm text-ink placeholder-grey outline-none focus:ring-2 focus:ring-gold"
               />
             </div>
             <div className="mb-4">
@@ -72,7 +72,7 @@ export default function Contact() {
                 id="category"
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
-                className="w-full rounded-lg border border-line px-3.5 py-2.5 text-sm text-ink outline-none focus:ring-1 focus:ring-gold bg-white"
+                className="w-full rounded-lg border border-line px-3.5 py-2.5 text-sm text-ink outline-none focus:ring-2 focus:ring-gold bg-white"
               >
                 {CATEGORIES.map((c) => (
                   <option key={c} value={c}>
@@ -91,24 +91,24 @@ export default function Contact() {
                 onChange={(e) => setDetails(e.target.value)}
                 rows={3}
                 placeholder="e.g. 40 bags Compound D, needed before 15 Sept, delivered to Lusaka"
-                className="w-full rounded-lg border border-line px-3.5 py-2.5 text-sm text-ink placeholder-grey outline-none focus:ring-1 focus:ring-gold resize-y"
+                className="w-full rounded-lg border border-line px-3.5 py-2.5 text-sm text-ink placeholder-grey outline-none focus:ring-2 focus:ring-gold resize-y"
               />
             </div>
             <button
               type="submit"
               className="w-full flex items-center justify-center gap-2 bg-[#25d366] text-white text-sm font-semibold px-6 py-3 rounded-full hover:bg-[#1da851] hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 transition-all"
             >
-              <MessageCircle className="w-4 h-4" />
+              <MessageCircle className="w-4 h-4" aria-hidden="true" />
               Send via WhatsApp
             </button>
             <a
               href={emailHref}
               className="mt-3 w-full flex items-center justify-center gap-2 text-grey text-sm font-medium px-6 py-3 rounded-full ring-1 ring-line hover:bg-cream hover:text-ink transition-colors"
             >
-              <Mail className="w-4 h-4" />
+              <Mail className="w-4 h-4" aria-hidden="true" />
               Send via Email instead
             </a>
-            <p className="mt-3 text-[12px] text-grey/70 text-center">
+            <p className="mt-3 text-[12px] text-grey text-center">
               Nothing here goes to a server — this just opens WhatsApp or your email app
               with your message pre-filled.
             </p>
@@ -122,7 +122,10 @@ export default function Contact() {
               rel="noopener noreferrer"
               className="group flex items-center gap-3 text-ink text-sm font-medium py-3 border-b border-line hover:text-[#1da851] transition-colors"
             >
-              <MessageCircle className="w-4 h-4 text-[#25d366] transition-transform duration-300 group-hover:scale-125" />
+              <MessageCircle
+                className="w-4 h-4 text-[#25d366] transition-transform duration-300 group-hover:scale-125"
+                aria-hidden="true"
+              />
               <span className="transition-transform duration-300 group-hover:translate-x-1">
                 WhatsApp: 0950 611 757
               </span>
@@ -131,7 +134,10 @@ export default function Contact() {
               href="mailto:info@avantyfrontier.com"
               className="group flex items-center gap-3 text-ink text-sm font-medium py-3 hover:text-gold transition-colors"
             >
-              <Mail className="w-4 h-4 text-gold transition-transform duration-300 group-hover:scale-125" />
+              <Mail
+                className="w-4 h-4 text-gold transition-transform duration-300 group-hover:scale-125"
+                aria-hidden="true"
+              />
               <span className="transition-transform duration-300 group-hover:translate-x-1">
                 info@avantyfrontier.com
               </span>
