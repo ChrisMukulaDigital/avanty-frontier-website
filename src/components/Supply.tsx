@@ -22,7 +22,7 @@ interface OfferCardProps {
 
 function OfferCard({ image, imageAlt, tag, title, items, proof, honestGap }: OfferCardProps) {
   return (
-    <div className="group rounded-2xl border border-line bg-white overflow-hidden text-left transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-ink/5 hover:border-line">
+    <div className="group rounded-2xl border border-line bg-white overflow-hidden text-left transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-primary/10 hover:border-line">
       <div className="h-44 sm:h-52 overflow-hidden">
         <img
           src={image}
@@ -32,21 +32,21 @@ function OfferCard({ image, imageAlt, tag, title, items, proof, honestGap }: Off
         />
       </div>
       <div className="p-7 sm:p-8">
-        <span className="inline-block text-[11px] font-bold uppercase tracking-wider text-[#7c5f20] bg-gold/10 px-2.5 py-1 rounded mb-4">
+        <span className="inline-block text-[11px] font-bold uppercase tracking-wider text-accent bg-accent/10 px-2.5 py-1 rounded mb-4">
           {tag}
         </span>
-        <h3 className="text-xl font-semibold text-ink mb-4">{title}</h3>
+        <h3 className="text-xl font-semibold text-primary mb-4">{title}</h3>
         <ul className="space-y-2 mb-6">
           {items.map((item) => (
-            <li key={item} className="flex gap-2 text-[15px] text-grey">
-              <span className="text-gold mt-1.5 w-1 h-1 rounded-full bg-gold shrink-0" />
+            <li key={item} className="flex gap-2 text-[15px] text-slate">
+              <span className="mt-1.5 w-1 h-1 rounded-full bg-accent shrink-0" />
               {item}
             </li>
           ))}
         </ul>
         <div
           className={`text-[13.5px] rounded px-3.5 py-2.5 border-l-2 ${
-            honestGap ? 'border-line bg-cream text-grey' : 'border-gold bg-cream text-ink'
+            honestGap ? 'border-line bg-bg text-slate' : 'border-accent bg-bg text-navy'
           }`}
         >
           {proof}
@@ -58,15 +58,15 @@ function OfferCard({ image, imageAlt, tag, title, items, proof, honestGap }: Off
 
 export default function Supply() {
   return (
-    <section id="supply" className="py-20 sm:py-24 px-5 sm:px-8 lg:px-10 bg-white">
+    <section id="supply" className="py-20 sm:py-24 px-5 sm:px-8 lg:px-10 bg-bg">
       <ScrollReveal className="max-w-5xl mx-auto text-center">
-        <span className="inline-block text-[13px] font-bold uppercase tracking-wider text-[#7c5f20] mb-3">
+        <span className="inline-block text-[13px] font-bold uppercase tracking-wider text-accent mb-3">
           What We Supply
         </span>
-        <h2 className="text-3xl sm:text-4xl font-normal text-ink tracking-tight text-balance mb-4">
+        <h2 className="text-3xl sm:text-4xl font-normal text-primary tracking-tight text-balance mb-4">
           Two categories, one sourcing model.
         </h2>
-        <p className="text-grey text-base sm:text-lg max-w-xl mx-auto mb-12">
+        <p className="text-slate text-base sm:text-lg max-w-xl mx-auto mb-12">
           We hold no inventory. We source from suppliers we already know, add a
           transparent margin and service fee, and coordinate delivery.
         </p>

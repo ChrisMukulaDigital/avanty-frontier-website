@@ -21,15 +21,15 @@ const STEPS = [
 
 export default function Process() {
   return (
-    <section id="process" className="py-20 sm:py-24 px-5 sm:px-8 lg:px-10 bg-cream">
+    <section id="process" className="py-20 sm:py-24 px-5 sm:px-8 lg:px-10 bg-white">
       <ScrollReveal className="max-w-5xl mx-auto text-center">
-        <span className="inline-block text-[13px] font-bold uppercase tracking-wider text-[#7c5f20] mb-3">
+        <span className="inline-block text-[13px] font-bold uppercase tracking-wider text-accent mb-3">
           How It Works
         </span>
-        <h2 className="text-3xl sm:text-4xl font-normal text-ink tracking-tight text-balance mb-4">
+        <h2 className="text-3xl sm:text-4xl font-normal text-navy tracking-tight text-balance mb-4">
           Three steps, start to finish.
         </h2>
-        <p className="text-grey text-base sm:text-lg max-w-xl mx-auto mb-14">
+        <p className="text-slate text-base sm:text-lg max-w-xl mx-auto mb-14">
           No account to set up, no portal to log into — every order runs through
           WhatsApp or email.
         </p>
@@ -43,16 +43,13 @@ export default function Process() {
                   aria-hidden="true"
                 />
               )}
-              <div className="relative z-10 w-16 h-16 rounded-full bg-ink flex items-center justify-center mb-5 transition-all duration-300 group-hover:bg-gold group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-gold/30">
-                <step.icon
-                  className="w-6 h-6 text-gold transition-colors duration-300 group-hover:text-ink"
-                  strokeWidth={1.75}
-                />
+              <div className="relative z-10 w-16 h-16 rounded-full bg-primary flex items-center justify-center mb-5 transition-all duration-300 group-hover:bg-accent group-hover:scale-110 group-hover:shadow-lg group-hover:shadow-accent/30">
+                <step.icon className="w-6 h-6 text-white" strokeWidth={1.75} />
               </div>
-              <h3 className="text-[17px] font-semibold text-ink mb-2">
+              <h3 className="text-[17px] font-semibold text-navy mb-2">
                 {i + 1}. {step.title}
               </h3>
-              <p className="text-[14.5px] text-grey leading-relaxed max-w-[260px]">{step.body}</p>
+              <p className="text-[14.5px] text-slate leading-relaxed max-w-[260px]">{step.body}</p>
             </div>
           ))}
         </div>

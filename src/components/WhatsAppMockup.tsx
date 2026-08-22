@@ -57,7 +57,7 @@ function Bubble({ from, children }: BubbleProps) {
     )
   }
   return (
-    <div className="bg-[#e8b923]/90 text-ink text-[13px] rounded-2xl rounded-br-sm px-3.5 py-2.5 max-w-[78%] ml-auto">
+    <div className="bg-accent/90 text-white text-[13px] rounded-2xl rounded-br-sm px-3.5 py-2.5 max-w-[78%] ml-auto">
       {children}
     </div>
   )
@@ -86,7 +86,7 @@ export default function WhatsAppMockup() {
         {/* Chat header */}
         <div className="shrink-0 bg-[#242427] border-b border-white/5 px-4 py-3 flex items-center gap-2.5">
           <ChevronLeft className="w-5 h-5 text-white/40" />
-          <div className="w-8 h-8 rounded-full bg-ink flex items-center justify-center text-gold text-[13px] font-bold shrink-0">
+          <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white text-[13px] font-bold shrink-0">
             A
           </div>
           <div className="flex items-center gap-1.5">
@@ -119,8 +119,8 @@ export default function WhatsAppMockup() {
           <div className="flex-1 bg-white/10 rounded-full px-4 py-2.5 text-[13px] text-white/30">
             Message
           </div>
-          <div className="w-9 h-9 rounded-full bg-[#e8b923] flex items-center justify-center shrink-0">
-            <Mic className="w-4 h-4 text-ink" />
+          <div className="w-9 h-9 rounded-full bg-accent flex items-center justify-center shrink-0">
+            <Mic className="w-4 h-4 text-white" />
           </div>
         </div>
 
