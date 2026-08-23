@@ -2,13 +2,7 @@ import { useState, type FormEvent } from 'react'
 import { ArrowUp } from 'lucide-react'
 import WhatsAppMockup from './WhatsAppMockup'
 import heroAgriImg from '../assets/hero-agri.jpg'
-
-const WHATSAPP_NUMBER = '260950611757'
-
-function buildWhatsAppLink(message: string) {
-  const base = `https://wa.me/${WHATSAPP_NUMBER}`
-  return message.trim() ? `${base}?text=${encodeURIComponent(message.trim())}` : base
-}
+import { EMAIL, whatsappLink } from '../lib/contact'
 
 /**
  * Illustrative stock photo of agricultural work — not Avanty's own operations.
@@ -36,7 +30,7 @@ export default function Hero() {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
-    window.open(buildWhatsAppLink(query), '_blank', 'noopener,noreferrer')
+    window.open(whatsappLink(query), '_blank', 'noopener,noreferrer')
   }
 
   return (
@@ -89,7 +83,7 @@ export default function Hero() {
 
         <div className="animate-fade-up [animation-delay:460ms] mt-4 sm:mt-5 flex flex-wrap items-center justify-center gap-3">
           <a
-            href="https://wa.me/260950611757"
+            href={whatsappLink()}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-accent text-white text-sm font-medium px-6 py-2.5 rounded-full hover:bg-[#e65a02] hover:shadow-lg transition-all"
@@ -97,7 +91,7 @@ export default function Hero() {
             WhatsApp Us
           </a>
           <a
-            href="mailto:info@avantyfrontier.com"
+            href={`mailto:${EMAIL}`}
             className="text-white text-sm font-medium px-6 py-2.5 rounded-full ring-1 ring-white/30 hover:bg-white/10 transition-colors"
           >
             Email Us

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import Logo from './Logo'
+import { whatsappLink } from '../lib/contact'
 
 const NAV_LINKS = [
   { label: 'What We Supply', href: '#supply' },
@@ -35,7 +36,7 @@ export default function Navbar() {
 
         <div className="flex items-center gap-2">
           <a
-            href="https://wa.me/260950611757"
+            href={whatsappLink()}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-accent text-white text-[13px] font-medium px-4 sm:px-5 py-2.5 rounded-full hover:bg-[#e65a02] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-colors"

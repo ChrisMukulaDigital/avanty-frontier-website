@@ -1,8 +1,8 @@
 import { useState, type FormEvent } from 'react'
 import { Mail, MessageCircle } from 'lucide-react'
 import ScrollReveal from './ScrollReveal'
+import { EMAIL, WHATSAPP_DISPLAY, whatsappLink } from '../lib/contact'
 
-const WHATSAPP_NUMBER = '260950611757'
 const CATEGORIES = ['Agricultural inputs', 'Cleaning & hygiene consumables', 'Something else']
 
 export default function Contact() {
@@ -22,11 +22,10 @@ export default function Contact() {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
-    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(buildMessage())}`
-    window.open(url, '_blank', 'noopener,noreferrer')
+    window.open(whatsappLink(buildMessage()), '_blank', 'noopener,noreferrer')
   }
 
-  const emailHref = `mailto:info@avantyfrontier.com?subject=${encodeURIComponent(
+  const emailHref = `mailto:${EMAIL}?subject=${encodeURIComponent(
     'Sourcing Enquiry',
   )}&body=${encodeURIComponent(buildMessage())}`
 
@@ -117,7 +116,7 @@ export default function Contact() {
           <div className="rounded-2xl border border-line bg-white p-6 sm:p-7 text-left transition-all duration-300 hover:shadow-lg hover:shadow-black/10">
             <h3 className="text-[15px] font-semibold text-navy mb-4">Prefer to reach us directly?</h3>
             <a
-              href={`https://wa.me/${WHATSAPP_NUMBER}`}
+              href={whatsappLink()}
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-3 text-navy text-sm font-medium py-3 border-b border-line hover:text-accent transition-colors"
@@ -127,11 +126,11 @@ export default function Contact() {
                 aria-hidden="true"
               />
               <span className="transition-transform duration-300 group-hover:translate-x-1">
-                WhatsApp: 0950 611 757
+                WhatsApp: {WHATSAPP_DISPLAY}
               </span>
             </a>
             <a
-              href="mailto:info@avantyfrontier.com"
+              href={`mailto:${EMAIL}`}
               className="group flex items-center gap-3 text-navy text-sm font-medium py-3 hover:text-accent transition-colors"
             >
               <Mail
@@ -139,7 +138,7 @@ export default function Contact() {
                 aria-hidden="true"
               />
               <span className="transition-transform duration-300 group-hover:translate-x-1">
-                info@avantyfrontier.com
+                {EMAIL}
               </span>
             </a>
             <p className="mt-4 text-[13px] text-slate leading-relaxed">
