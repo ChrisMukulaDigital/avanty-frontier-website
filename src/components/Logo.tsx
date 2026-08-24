@@ -1,22 +1,19 @@
+import logoImg from '../assets/logo.png'
+
 interface LogoProps {
   className?: string
 }
 
 /**
- * Placeholder wordmark until Avanty has a finished mark.
- * Swap the JSX below for a real <img>/<svg> mark later — everything
- * that renders the logo imports this one component.
- * Always rendered on a deep-blue surface (Navbar, Footer), so it's white/orange.
+ * Avanty's real logo. Full-color lockup (navy "AVANTY", orange "FRONTIER")
+ * designed for a light background — always rendered on a deep-blue surface
+ * here (Navbar, Footer), so it sits on a white chip for legibility rather
+ * than needing a separate reversed/white asset.
  */
 export default function Logo({ className = '' }: LogoProps) {
   return (
-    <span
-      className={`inline-flex items-baseline gap-1 text-[15px] sm:text-[17px] font-bold tracking-[0.04em] ${className}`}
-    >
-      <span className="text-white">AVANTY</span>
-      <span className="text-accent uppercase text-[12px] sm:text-[13px] tracking-[0.14em]">
-        Frontier
-      </span>
+    <span className={`inline-flex items-center bg-white rounded-lg px-3 py-1.5 shadow-sm ${className}`}>
+      <img src={logoImg} alt="Avanty Frontier Limited" className="h-9 sm:h-10 w-auto" />
     </span>
   )
 }
