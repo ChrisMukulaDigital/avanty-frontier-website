@@ -105,17 +105,21 @@ export default function ProcurementSupply() {
             ))}
           </div>
 
-          <div className="mt-10 max-w-2xl mx-auto rounded-2xl border border-line border-l-4 border-l-accent bg-white p-6 sm:p-7 flex gap-5 items-center">
+          <div className="mt-10 max-w-2xl mx-auto rounded-2xl border border-line bg-white p-6 sm:p-7 flex gap-5 items-center shadow-sm">
             <img
               src={agriInputsImg}
               alt="Fertilizer granules"
               className="hidden sm:block w-20 h-20 rounded-xl object-cover shrink-0"
             />
-            <p className="text-[14px] text-navy leading-relaxed">
-              <span className="font-semibold">Track record: </span>
-              already supplying recurring agricultural-input orders — including cross-border
-              delivery — sourced from ETG in Lusaka.
-            </p>
+            <div>
+              <span className="inline-block text-[11px] font-bold uppercase tracking-wider text-accent bg-accent/10 px-2.5 py-1 rounded mb-2">
+                Track record
+              </span>
+              <p className="text-[14px] text-navy leading-relaxed">
+                Already supplying recurring agricultural-input orders — including
+                cross-border delivery — sourced from ETG in Lusaka.
+              </p>
+            </div>
           </div>
         </ScrollReveal>
       </section>

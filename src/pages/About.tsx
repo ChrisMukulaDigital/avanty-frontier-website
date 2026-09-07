@@ -234,7 +234,7 @@ export default function About() {
       </section>
 
       <section className="py-16 sm:py-20 px-5 sm:px-8 lg:px-10 bg-bg">
-        <ScrollReveal className="max-w-2xl mx-auto rounded-2xl border border-line border-l-4 border-l-accent bg-white p-7 sm:p-8 text-center">
+        <ScrollReveal className="max-w-2xl mx-auto rounded-2xl border border-line bg-white p-7 sm:p-8 text-center shadow-sm">
           <Building2 className="w-6 h-6 text-primary mx-auto mb-4" strokeWidth={1.75} aria-hidden="true" />
           <p className="text-navy text-[15px] sm:text-base leading-relaxed italic">
             "We help Zambian businesses, institutions, and agricultural buyers who struggle

@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "createdAt": "2026-09-07T20:17:51.420Z",
+        "reason": "original build spec explicitly directed a neutral, non-distinctive sans stack for this corporate B2B site ('clean, neutral sans stack, no third-party brand font tied to another product') — not a live confirmation, but the user's own written spec from project start; already shipped to production"
+      }
+    ]
+  }
+}
