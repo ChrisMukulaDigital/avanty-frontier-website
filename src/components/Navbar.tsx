@@ -1,16 +1,27 @@
 import { useState } from 'react'
+import { Link, NavLink } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import Logo from './Logo'
 import { whatsappLink } from '../lib/contact'
 
 const NAV_LINKS = [
-  { label: 'What We Supply', href: '#supply' },
-  { label: 'How It Works', href: '#process' },
-  { label: 'About', href: '#about' },
-  { label: 'Why Choose Us', href: '#why' },
+  { label: 'About', to: '/about' },
+  { label: 'Procurement & Supply', to: '/procurement-supply' },
+  { label: 'Cleaning Services', to: '/cleaning-services' },
+  { label: 'Why Choose Us', to: '/why-choose-us' },
 ]
 
-const MOBILE_LINKS = [...NAV_LINKS, { label: 'Contact', href: '#contact' }]
+const MOBILE_LINKS = [...NAV_LINKS, { label: 'Contact', to: '/contact' }]
+
+const linkClass = ({ isActive }: { isActive: boolean }) =>
+  `text-[13px] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent rounded-sm transition-colors ${
+    isActive ? 'text-white font-semibold' : 'text-white/80'
+  }`
+
+const mobileLinkClass = ({ isActive }: { isActive: boolean }) =>
+  `block text-[15px] hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent rounded-sm py-3 border-b border-line last:border-b-0 transition-colors ${
+    isActive ? 'text-primary font-semibold' : 'text-slate'
+  }`
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -18,19 +29,15 @@ export default function Navbar() {
   return (
     <nav className="animate-fade-down sticky top-0 z-30 bg-primary shadow-sm">
       <div className="flex items-center justify-between px-5 sm:px-8 lg:px-10 py-4 sm:py-5">
-        <a href="#top" className="shrink-0">
+        <Link to="/" className="shrink-0">
           <Logo />
-        </a>
+        </Link>
 
         <div className="hidden md:flex items-center gap-8">
           {NAV_LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-[13px] text-white/80 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent rounded-sm transition-colors"
-            >
+            <NavLink key={link.to} to={link.to} className={linkClass}>
               {link.label}
-            </a>
+            </NavLink>
           ))}
         </div>
 
@@ -58,14 +65,9 @@ export default function Navbar() {
       {open && (
         <div className="md:hidden absolute left-4 right-4 top-full rounded-2xl bg-white shadow-lg ring-1 ring-line px-5 py-3 animate-fade-up">
           {MOBILE_LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className="block text-[15px] text-slate hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent rounded-sm py-3 border-b border-line last:border-b-0 transition-colors"
-            >
+            <NavLink key={link.to} to={link.to} onClick={() => setOpen(false)} className={mobileLinkClass}>
               {link.label}
-            </a>
+            </NavLink>
           ))}
         </div>
       )}
