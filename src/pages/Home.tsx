@@ -58,7 +58,7 @@ export default function Home() {
               <Link
                 key={offer.to}
                 to={offer.to}
-                className="group rounded-2xl border border-line bg-white overflow-hidden text-left block transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-primary/10"
+                className="group rounded-2xl border border-line bg-white overflow-hidden text-left block transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-primary/10 active:translate-y-0 active:scale-[0.99] active:shadow-md"
               >
                 <div className="h-44 sm:h-52 overflow-hidden">
                   <img
@@ -111,7 +111,7 @@ export default function Home() {
 
           <Link
             to="/why-choose-us"
-            className="inline-flex items-center gap-1.5 text-[14px] font-semibold text-accent hover:text-primary transition-colors"
+            className="inline-flex items-center gap-1.5 text-[14px] font-semibold text-accent hover:text-primary active:opacity-60 transition-colors"
           >
             See all reasons
             <ArrowRight className="w-4 h-4" aria-hidden="true" />
@@ -133,13 +133,13 @@ export default function Home() {
               href={whatsappLink()}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-accent text-white text-sm font-medium px-6 py-2.5 rounded-full hover:bg-[#e65a02] hover:shadow-lg transition-all"
+              className="bg-accent text-white text-sm font-medium px-6 py-2.5 rounded-full hover:bg-[#e65a02] hover:shadow-lg active:scale-[0.97] transition-all"
             >
               WhatsApp Us
             </a>
             <Link
               to="/contact"
-              className="text-white text-sm font-medium px-6 py-2.5 rounded-full ring-1 ring-white/30 hover:bg-white/10 transition-colors"
+              className="text-white text-sm font-medium px-6 py-2.5 rounded-full ring-1 ring-white/30 hover:bg-white/10 active:scale-[0.97] active:bg-white/15 transition-all"
             >
               Get a detailed quote
             </Link>

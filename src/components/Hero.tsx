@@ -43,7 +43,7 @@ export default function Hero() {
       <div className="flex-1 min-h-16 sm:min-h-20 lg:min-h-24 shrink-0" />
 
       <div className="relative z-10 flex flex-col items-center text-center px-5">
-        <h1 className="text-white font-normal leading-[1.05] tracking-tight text-[40px] min-[400px]:text-[44px] sm:text-6xl lg:text-7xl xl:text-[80px]">
+        <h1 className="text-white font-normal leading-[1.05] tracking-tight lg:tracking-tighter text-[40px] min-[400px]:text-[44px] sm:text-6xl lg:text-7xl xl:text-[80px]">
           <span className="block animate-fade-up">Sourced right.</span>
           <span className="block animate-fade-up [animation-delay:100ms]">
             Delivered on time.
@@ -86,13 +86,13 @@ export default function Hero() {
             href={whatsappLink()}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-accent text-white text-sm font-medium px-6 py-2.5 rounded-full hover:bg-[#e65a02] hover:shadow-lg transition-all"
+            className="bg-accent text-white text-sm font-medium px-6 py-2.5 rounded-full hover:bg-[#e65a02] hover:shadow-lg active:scale-[0.97] transition-all"
           >
             WhatsApp Us
           </a>
           <a
             href={`mailto:${EMAIL}`}
-            className="text-white text-sm font-medium px-6 py-2.5 rounded-full ring-1 ring-white/30 hover:bg-white/10 transition-colors"
+            className="text-white text-sm font-medium px-6 py-2.5 rounded-full ring-1 ring-white/30 hover:bg-white/10 active:scale-[0.97] active:bg-white/15 transition-all"
           >
             Email Us
           </a>

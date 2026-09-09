@@ -15,7 +15,7 @@ export default function Footer() {
   return (
     <footer className="bg-primary px-5 sm:px-8 lg:px-10 py-10">
       <div className="max-w-5xl mx-auto flex flex-col items-center gap-6 text-center">
-        <Link to="/">
+        <Link to="/" className="active:opacity-70 transition-opacity">
           <Logo />
         </Link>
         <p className="text-accent text-[12px] font-semibold uppercase tracking-wider">{MOTTO}</p>
@@ -24,7 +24,7 @@ export default function Footer() {
             <Link
               key={link.to}
               to={link.to}
-              className="py-2.5 text-white/80 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent rounded-sm transition-colors"
+              className="py-2.5 text-white/80 hover:text-accent active:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent rounded-sm transition-colors"
             >
               {link.label}
             </Link>

@@ -101,7 +101,7 @@ export default function Contact() {
               </button>
               <a
                 href={emailHref}
-                className="mt-3 w-full flex items-center justify-center gap-2 text-slate text-sm font-medium px-6 py-3 rounded-full ring-1 ring-line hover:bg-bg hover:text-navy transition-colors"
+                className="mt-3 w-full flex items-center justify-center gap-2 text-slate text-sm font-medium px-6 py-3 rounded-full ring-1 ring-line hover:bg-bg hover:text-navy active:bg-line/60 transition-colors"
               >
                 <Mail className="w-4 h-4" aria-hidden="true" />
                 Send via Email instead
@@ -119,7 +119,7 @@ export default function Contact() {
                 href={whatsappLink()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-3 text-navy text-sm font-medium py-3 border-b border-line hover:text-accent transition-colors"
+                className="group flex items-center gap-3 text-navy text-sm font-medium py-3 border-b border-line hover:text-accent active:text-accent/70 transition-colors"
               >
                 <MessageCircle
                   className="w-4 h-4 text-accent transition-transform duration-300 group-hover:scale-125"
@@ -134,7 +134,7 @@ export default function Contact() {
                 <Phone className="w-4 h-4 text-accent mt-0.5" aria-hidden="true" />
                 <div className="flex flex-col gap-1">
                   {PHONE_NUMBERS.map((num) => (
-                    <a key={num} href={`tel:${num.replace(/\s/g, '')}`} className="hover:text-accent transition-colors">
+                    <a key={num} href={`tel:${num.replace(/\s/g, '')}`} className="hover:text-accent active:text-accent/70 transition-colors">
                       {num}
                     </a>
                   ))}
@@ -143,7 +143,7 @@ export default function Contact() {
 
               <a
                 href={`mailto:${EMAIL}`}
-                className="group flex items-center gap-3 text-navy text-sm font-medium py-3 border-b border-line hover:text-accent transition-colors"
+                className="group flex items-center gap-3 text-navy text-sm font-medium py-3 border-b border-line hover:text-accent active:text-accent/70 transition-colors"
               >
                 <Mail
                   className="w-4 h-4 text-accent transition-transform duration-300 group-hover:scale-125"
