@@ -2,7 +2,15 @@ import { useState, type FormEvent } from 'react'
 import { Mail, MapPin, MessageCircle, Phone } from 'lucide-react'
 import ScrollReveal from '../components/ScrollReveal'
 import PageHero from '../components/PageHero'
-import { ADDRESS, EMAIL, PHONE_NUMBERS, WHATSAPP_DISPLAY, whatsappLink } from '../lib/contact'
+import { FacebookIcon, InstagramIcon, LinkedinIcon, XIcon } from '../components/SocialIcons'
+import { ADDRESS, EMAIL, PHONE_NUMBERS, SOCIALS, WHATSAPP_DISPLAY, whatsappLink } from '../lib/contact'
+
+const SOCIAL_LINKS = [
+  { label: 'Facebook', href: SOCIALS.facebook, Icon: FacebookIcon },
+  { label: 'Instagram', href: SOCIALS.instagram, Icon: InstagramIcon },
+  { label: 'LinkedIn', href: SOCIALS.linkedin, Icon: LinkedinIcon },
+  { label: 'X (Twitter)', href: SOCIALS.x, Icon: XIcon },
+]
 
 const CATEGORIES = [
   'Agricultural inputs',
@@ -152,9 +160,24 @@ export default function Contact() {
                 <span className="transition-transform duration-300 group-hover:translate-x-1">{EMAIL}</span>
               </a>
 
-              <div className="flex items-start gap-3 text-navy text-sm font-medium py-3">
+              <div className="flex items-start gap-3 text-navy text-sm font-medium py-3 border-b border-line">
                 <MapPin className="w-4 h-4 text-accent mt-0.5 shrink-0" aria-hidden="true" />
                 <span>{ADDRESS}</span>
+              </div>
+
+              <div className="flex items-center gap-3 pt-4">
+                {SOCIAL_LINKS.map(({ label, href, Icon }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    className="w-9 h-9 rounded-full flex items-center justify-center text-navy bg-bg hover:bg-accent hover:text-white active:scale-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent transition-all"
+                  >
+                    <Icon className="w-4 h-4" aria-hidden="true" />
+                  </a>
+                ))}
               </div>
 
               <p className="mt-4 text-[13px] text-slate leading-relaxed">

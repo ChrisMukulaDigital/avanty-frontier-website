@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import Logo from './Logo'
-import { MOTTO } from '../lib/contact'
+import { MOTTO, SOCIALS } from '../lib/contact'
+import { FacebookIcon, InstagramIcon, LinkedinIcon, XIcon } from './SocialIcons'
 
 const LINKS = [
   { label: 'About', to: '/about' },
@@ -8,6 +9,13 @@ const LINKS = [
   { label: 'Cleaning Services', to: '/cleaning-services' },
   { label: 'Why Choose Us', to: '/why-choose-us' },
   { label: 'Contact', to: '/contact' },
+]
+
+const SOCIAL_LINKS = [
+  { label: 'Facebook', href: SOCIALS.facebook, Icon: FacebookIcon },
+  { label: 'Instagram', href: SOCIALS.instagram, Icon: InstagramIcon },
+  { label: 'LinkedIn', href: SOCIALS.linkedin, Icon: LinkedinIcon },
+  { label: 'X (Twitter)', href: SOCIALS.x, Icon: XIcon },
 ]
 
 export default function Footer() {
@@ -28,6 +36,20 @@ export default function Footer() {
             >
               {link.label}
             </Link>
+          ))}
+        </div>
+        <div className="flex items-center gap-4">
+          {SOCIAL_LINKS.map(({ label, href, Icon }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              className="w-9 h-9 rounded-full flex items-center justify-center text-white/80 hover:text-white hover:bg-white/10 active:bg-white/20 active:scale-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent transition-all"
+            >
+              <Icon className="w-4 h-4" aria-hidden="true" />
+            </a>
           ))}
         </div>
         <div className="text-[13px] text-white/60">

@@ -13,6 +13,14 @@ export const EMAIL = 'info@avantyfrontier.com'
 export const ADDRESS = 'Plot 2856, Meanwood Ndeke, Chongwe, Lusaka, Zambia'
 export const MOTTO = 'Move Forward. Source Better. Serve Better.'
 
+export const SOCIALS = {
+  facebook: 'https://www.facebook.com/share/1DyxCCW4Nz/?mibextid=wwXIfr',
+  instagram:
+    'https://www.instagram.com/avantyfrontier?stkn=MTYwMnFwcHBmN2hwMw%3D%3D&utm_source=qr',
+  linkedin: 'https://www.linkedin.com/company/avanty-frontier-limited/',
+  x: 'https://x.com/avantyfrontier?s=11',
+}
+
 export function whatsappLink(message?: string) {
   const base = `https://wa.me/${WHATSAPP_NUMBER}`
   return message?.trim() ? `${base}?text=${encodeURIComponent(message.trim())}` : base
