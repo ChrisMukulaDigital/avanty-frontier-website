@@ -14,6 +14,7 @@ import {
 import ScrollReveal from '../components/ScrollReveal'
 import PageHero from '../components/PageHero'
 import { MOTTO } from '../lib/contact'
+import ericPhoto from '../assets/eric-simwinga.jpg'
 
 const VALUES = [
   {
@@ -95,20 +96,35 @@ export default function About() {
   return (
     <>
       <PageHero eyebrow="About Avanty" title="Built on a working relationship, not a concept.">
-        Before Avanty existed as a company, its founder was already sourcing agricultural
-        inputs from ETG in Lusaka for a recurring buyer, delivered across multiple cycles —
-        including cross-border into DRC. Avanty Frontier Limited was formed to formalize
-        that relationship into a proper company.
+        Avanty Frontier Limited is a Zambian-owned company focused on procurement and
+        supply, and professional cleaning services — providing reliable, practical
+        solutions to businesses, institutions, organisations, and individuals.
       </PageHero>
 
       <section className="py-20 sm:py-24 px-5 sm:px-8 lg:px-10 bg-white">
         <ScrollReveal className="max-w-3xl mx-auto text-center">
           <span className="inline-block text-[13px] font-bold uppercase tracking-wider text-accent mb-3">
-            Our Identity
+            What We Do
           </span>
           <h2 className="text-3xl sm:text-4xl font-normal text-navy tracking-tight text-balance mb-6">
-            Where the name comes from
+            Two service lines, one standard
           </h2>
+          <p className="text-slate text-base sm:text-lg leading-relaxed mb-4">
+            We help our clients source and access quality products efficiently — from
+            office and ICT equipment to agricultural inputs, cleaning supplies, PPE,
+            building materials, stationery, furniture, and other essential goods. Through
+            our procurement and supply services, we connect clients with suitable
+            suppliers while focusing on quality, value, timely delivery, and dependable
+            service.
+          </p>
+          <p className="text-slate text-base sm:text-lg leading-relaxed mb-10">
+            Our professional cleaning services provide clean, safe, and well-maintained
+            environments for offices, homes, and other facilities, including routine,
+            deep, and post-construction cleaning.
+          </p>
+
+          <div className="h-px bg-line max-w-xs mx-auto mb-10" />
+
           <p className="text-slate text-base sm:text-lg leading-relaxed mb-4">
             "Avanty" is inspired by the Italian word "Avanti", meaning "move forward." The
             spelling was deliberately chosen to create a distinctive corporate identity and
@@ -127,28 +143,79 @@ export default function About() {
       </section>
 
       <section className="py-20 sm:py-24 px-5 sm:px-8 lg:px-10 bg-bg">
-        <ScrollReveal className="max-w-5xl mx-auto grid sm:grid-cols-2 gap-6">
-          <div className="rounded-2xl border border-line bg-white p-7 sm:p-8">
-            <h3 className="text-[13px] font-bold uppercase tracking-wider text-accent mb-3">
-              Vision
-            </h3>
-            <p className="text-navy text-base leading-relaxed">
-              To become a trusted and highly respected Zambian sourcing, supply and
-              facilities services company, recognised for reliability, quality, innovation
-              and excellence, while building lasting value for clients, suppliers, employees
-              and communities.
-            </p>
+        <ScrollReveal className="max-w-5xl mx-auto">
+          <div className="grid sm:grid-cols-2 gap-6 mb-10">
+            <div className="rounded-2xl border border-line bg-white p-7 sm:p-8">
+              <h3 className="text-[13px] font-bold uppercase tracking-wider text-accent mb-3">
+                Vision
+              </h3>
+              <p className="text-navy text-base leading-relaxed">
+                To become a trusted and highly respected Zambian sourcing, supply and
+                facilities services company, recognised for reliability, quality, innovation
+                and excellence, while building lasting value for clients, suppliers, employees
+                and communities.
+              </p>
+            </div>
+            <div className="rounded-2xl border border-line bg-white p-7 sm:p-8">
+              <h3 className="text-[13px] font-bold uppercase tracking-wider text-accent mb-3">
+                Mission
+              </h3>
+              <p className="text-navy text-base leading-relaxed">
+                To make it easier for our clients to get what they need and maintain the
+                environments in which they work and live — connecting them to quality
+                products, dependable suppliers and professional cleaning solutions, delivered
+                on time and to the standard they expect.
+              </p>
+            </div>
           </div>
-          <div className="rounded-2xl border border-line bg-white p-7 sm:p-8">
-            <h3 className="text-[13px] font-bold uppercase tracking-wider text-accent mb-3">
-              Mission
-            </h3>
-            <p className="text-navy text-base leading-relaxed">
-              To make it easier for our clients to get what they need and maintain the
-              environments in which they work and live — connecting them to quality
-              products, dependable suppliers and professional cleaning solutions, delivered
-              on time and to the standard they expect.
-            </p>
+          <p className="max-w-2xl mx-auto text-center text-navy text-base sm:text-lg leading-relaxed">
+            At Avanty Frontier, we are driven by a simple philosophy: move forward, create
+            value, and build lasting relationships. We aim to grow into a trusted and
+            diversified Zambian enterprise by delivering solutions that make our clients'
+            work easier and their operations more efficient.
+          </p>
+        </ScrollReveal>
+      </section>
+
+      <section className="py-20 sm:py-24 px-5 sm:px-8 lg:px-10 bg-mist">
+        <ScrollReveal className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <span className="inline-block text-[13px] font-bold uppercase tracking-wider text-accent mb-3">
+              Founder
+            </span>
+            <h2 className="text-3xl sm:text-4xl font-normal text-navy tracking-tight text-balance">
+              Eric Simwinga
+            </h2>
+          </div>
+
+          <div className="grid sm:grid-cols-[280px_1fr] gap-8 sm:gap-10 items-start max-w-3xl mx-auto">
+            <div className="mx-auto sm:mx-0 w-48 sm:w-full aspect-[3/4] rounded-2xl overflow-hidden ring-1 ring-line shadow-sm">
+              <img
+                src={ericPhoto}
+                alt="Eric Simwinga, Founder of Avanty Frontier Limited"
+                className="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div>
+              <p className="text-navy text-base sm:text-lg leading-relaxed mb-4">
+                Eric Simwinga is a Zambian Agricultural Economist, entrepreneur, visionary
+                leader, and young professional passionate about creating positive change and
+                meaningful growth.
+              </p>
+              <p className="text-slate text-[15px] leading-relaxed mb-4">
+                He holds a Bachelor's degree in Agricultural Economics from the University of
+                Zambia, where his journey in leadership began. During his time at the
+                University, Eric held various leadership positions within the School of
+                Agricultural Sciences and went on to significantly lead the School of
+                Agricultural Sciences during the 2023/24 academic year.
+              </p>
+              <p className="text-slate text-[15px] leading-relaxed">
+                Beyond academics and leadership, Eric is driven by a desire to learn, build,
+                and contribute to a better future. He believes that meaningful progress
+                begins with a positive mindset, purposeful action, and the courage to pursue
+                ideas that can make a difference.
+              </p>
+            </div>
           </div>
         </ScrollReveal>
       </section>
