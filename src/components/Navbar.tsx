@@ -5,6 +5,7 @@ import Logo from './Logo'
 import { whatsappLink } from '../lib/contact'
 
 const NAV_LINKS = [
+  { label: 'Home', to: '/' },
   { label: 'About', to: '/about' },
   { label: 'Procurement & Supply', to: '/procurement-supply' },
   { label: 'Cleaning Services', to: '/cleaning-services' },
@@ -35,7 +36,7 @@ export default function Navbar() {
 
         <div className="hidden md:flex items-center gap-8">
           {NAV_LINKS.map((link) => (
-            <NavLink key={link.to} to={link.to} className={linkClass}>
+            <NavLink key={link.to} to={link.to} end={link.to === '/'} className={linkClass}>
               {link.label}
             </NavLink>
           ))}
@@ -76,6 +77,7 @@ export default function Navbar() {
           <NavLink
             key={link.to}
             to={link.to}
+            end={link.to === '/'}
             tabIndex={open ? undefined : -1}
             onClick={() => setOpen(false)}
             className={mobileLinkClass}

@@ -4,6 +4,7 @@ import { MOTTO, SOCIALS } from '../lib/contact'
 import { FacebookIcon, InstagramIcon, LinkedinIcon, XIcon } from './SocialIcons'
 
 const LINKS = [
+  { label: 'Home', to: '/' },
   { label: 'About', to: '/about' },
   { label: 'Procurement & Supply', to: '/procurement-supply' },
   { label: 'Cleaning Services', to: '/cleaning-services' },
