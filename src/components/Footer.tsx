@@ -52,8 +52,19 @@ export default function Footer() {
             </a>
           ))}
         </div>
-        <div className="text-[13px] text-white/60">
-          © {year} Avanty Frontier Limited — Lusaka, Zambia
+        <div className="w-full max-w-xs h-px bg-white/10" />
+        <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-[12px] font-bold uppercase tracking-wide text-white/50">
+          <span>© {year} Avanty Frontier Limited. All Rights Reserved.</span>
+          <span className="hidden sm:inline text-white/30">&middot;</span>
+          <div className="flex items-center gap-3">
+            <Link to="/privacy" className="hover:text-white active:opacity-60 transition-colors">
+              Privacy Policy
+            </Link>
+            <span className="text-white/30">&middot;</span>
+            <Link to="/terms" className="hover:text-white active:opacity-60 transition-colors">
+              Terms &amp; Conditions
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

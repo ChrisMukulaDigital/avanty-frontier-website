@@ -14,7 +14,7 @@ export const ADDRESS = 'Plot 2856, Meanwood Ndeke, Chongwe, Lusaka, Zambia'
 export const MOTTO = 'Move Forward. Source Better. Serve Better.'
 
 export const SOCIALS = {
-  facebook: 'https://www.facebook.com/share/1DyxCCW4Nz/?mibextid=wwXIfr',
+  facebook: 'https://www.facebook.com/share/1DnXev3rqU/?mibextid=wwXIfr',
   instagram:
     'https://www.instagram.com/avantyfrontier?stkn=MTYwMnFwcHBmN2hwMw%3D%3D&utm_source=qr',
   linkedin: 'https://www.linkedin.com/company/avanty-frontier-limited/',
